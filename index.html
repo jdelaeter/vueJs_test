@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> </title>
+        <meta charset="UTF-8">
+    </head>
+<body>
+    <!-- Your document template -->
+    <div id="app">
+        <p><h1>Detection de la checkbox</h1></p>
+        
+        <input type="checkbox" @click="close">
+        
+        <div v-if="sucess">
+            <p>bravo votre enregistrement à marcher</p>
+        </div><br>
+    
+        <p><h1>Ajouter nom à partir d'un input</h1></p>
+        <!-- detection de click via v-on ou @click  et ajout dans une liste-->
+        <button @click="addPerson">Ajouter Personne</button><br>
+        <input type="text" id="inputText" placeholder="nom à ajouter">
+        <ul>
+            <li v-for="tab in tabGens">{{ tab }}</li>
+        </ul>
+
+        <p><h1>Utilisation d'un v-model (affiche un input en temps réel)</h1></p>
+        <input type="text" v-model="msg">
+        <p>{{msg}}</p>
+
+        <div>
+            <input type="checkbox" id="jean" value="zae" v-model="ckbox">
+            <label for="jean">Jean</label>
+        <!-- liason par l'id pour le label -->
+            <input type="checkbox" id="paul" value="paul" v-model="ckbox">
+            //<label for="paul">paul</label>
+
+            <input type="checkbox" id="pierre" value="pierre" v-model="ckbox">
+            //<label for="pierre">pierre</label>
+
+            <p>{{ckbox}}</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.4/vue.js"></script>
+    <script src="js/app.js"></script>
+<body>
+</html>
