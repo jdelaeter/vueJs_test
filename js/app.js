@@ -8,6 +8,10 @@ Vue.component('button-counter', {
     template: '<button @click="count++">Vous m\'avez cliqué {{ count }} fois.</button>'
   })
 
+  Vue.component('abc', {
+    template: '<div>Mon composant simple </div>'
+  })
+
 
 let vm= new Vue({
     el: '#app',
